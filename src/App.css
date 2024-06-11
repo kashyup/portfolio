@@ -1,0 +1,115 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* General body styles */
+body {
+  background: rgb(28, 31, 41);
+  color: #f08a5d;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: lighter;
+  overflow: hidden;
+  font-size: 14px; /* Base font size */
+}
+
+/* Styles for main titles and paragraphs within sections */
+.text-1 h1, .text-3 p {
+  margin: 0;
+  padding: 10px;
+  width: max-content;
+}
+
+/* Styles specific to the first text section */
+.text-1 h1 {
+  display: grid;
+  height: auto;
+  font-size: 18px;
+}
+
+/* Accordion base styles */
+.accordion, .accordion ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  user-select: none; /* Prevent text selection */
+}
+
+.accordion label {
+  cursor: pointer;
+}
+
+.accordion input {
+  display: none; /* Hide the checkbox */
+}
+
+/* Pseudo-elements for accordion labels */
+input[type="checkbox"] + label::before {
+  content: "[+]";
+  margin-right: 5px;
+  font-weight: normal;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "[-]";
+}
+
+/* Dynamic display of accordion contents */
+input[type="checkbox"]:checked + label + ul {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for links in lists */
+.social-list li a, .projects-list li a, .info-list li a {
+  color: #f08a5d;
+  text-decoration: none;
+}
+
+/* Typewriter effect and blinking cursor */
+@keyframes blink {
+  0%, 50% { border-color: transparent; }
+  51%, 100% { border-color: #f08a5d; }
+}
+
+.typewriter, .typewriter-phone {
+  margin-left: 10px;
+  border-right: 1px solid #f08a5d;
+  animation: blink 1s infinite;
+}
+
+.typewriter {
+  visibility: visible;
+}
+
+.line {
+  width: fit-content;
+  margin: 0;
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+  .typewriter-phone {
+      font-size: 14px;
+      display: block;
+  }
+  .typewriter {
+      display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .typewriter {
+      display: block;
+  }
+  .typewriter-phone {
+      display: none;
+  }
+}
+
+/* Styles specific to about me text */
+#aboutMeText {
+  margin: 0px;
+}
