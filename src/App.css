@@ -15,11 +15,11 @@ body {
   font-size: 14px; /* Base font size */
 }
 
+
 /* Styles for main titles and paragraphs within sections */
 .text-1 h1, .text-3 p {
   margin: 0;
   padding: 10px;
-  width: max-content;
 }
 
 /* Styles specific to the first text section */
